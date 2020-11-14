@@ -1,0 +1,7 @@
+{
+  "name": "appescola-ionic-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
