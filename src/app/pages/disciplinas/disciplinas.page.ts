@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DisciplinaService } from 'src/services/domain/discipina.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-disciplinas',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisciplinasPage implements OnInit {
 
-  constructor() { }
+  constructor(
+   public disciplinaService: DisciplinaService) { 
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+        this.disciplinaService.findAll()
+        .subscribe(response => {
+          console.log();
+        },
+        error => {
+          console.log(error);
+        });
+        
+      }
+
+      
 }
