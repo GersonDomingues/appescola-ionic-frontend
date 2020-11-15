@@ -17,6 +17,11 @@ export class AppComponent implements OnInit {
       url: '/home',
       icon: 'home'
     },
+    {
+      title: 'Disciplinas',
+      url: '/disciplinas',
+      icon: 'book'
+    }
     
   ];
   
